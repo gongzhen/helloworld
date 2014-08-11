@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- Website Title & Description for Search Engine purposes -->
+        <meta name="description" content="">
+
+        <!-- Mobile viewport optimized -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <!-- Bootstrap CSS -->
+        <link href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{url_for('static', filename='includes/css/bootstrap-glyphicons.css')}}" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="{{url_for('static', filename='includes/css/styles.css')}}" rel="stylesheet">
+
+        <!-- Include Modernizr in the head, before any other Javascript -->
+        <script src="{{url_for('static', filename='includes/js/modernizr-2.6.2.min.js')}}"></script>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        <div class="container" id="main">
+            <div class="carousel slide" id="myCarousel">
+
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+                    <li data-slide-to="1" data-target="#myCarousel"></li>
+                    <li data-slide-to="2" data-target="#myCarousel"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active" id="slide1" >
+                        <div class="carousel-caption">
+                            <h4>Bootstrap 3</h4>
+                            <p>Learn how to build your first responsive website with the brand new Twitter Bootstrap 3!</p>
+                        </div><!--end carousel-caption-->
+                    </div><!--end item-->
+
+                    <div class="item" id="slide2">
+                        <div class="carousel-caption">
+                            <h4>Learn to code a website in 4-hours</h4>
+                            <p>PSD to HTML5 &amp; CSS3 and Bootstrap</p>
+                        </div><!--end carousel-caption-->
+                    </div><!--end item-->
+
+                    <div class="item" id="slide3">
+                        <div class="carousel-caption">
+                            <h4>Web Hosting 101</h4>
+                            <p>Learn how to buy a perfect domain name and hosting package</p>
+                        </div><!--end carousel-caption-->
+                    </div><!--end item-->
+                </div><!--end carausel-inner-->
+
+                <!-- Controls pre and next-->
+                <a href="#myCarousel" class="left carousel-control" data-slide="prev"><span class="icon-prev"></span></a>
+                <a href="#myCarousel" class="right carousel-control" data-slide="next"><span class="icon-next"></span></a>
+
+            </div><!--end myCarousel-->
+
+        </div><!--end container-->        
+
+        <!-- 
+                <script type="text/javascript">
+                    var i_current = 0;
+                    var i_total = 0;
+        
+                    function doSlide(init) {
+                        alert("doSlide");
+                        if (init) {
+                            i_next = 0;
+                        } else {
+                            i_next = i_current + 1;
+                            if (i_next >= i_total)
+                                i_next = 0;
+                        }
+                        alert('alert(i_current):' + i_current);
+                        $($('.slide')[i_current]).children('img').each(function(i) {
+                            var t = $(this);
+                            alert('newState');
+                            var newState = {duration: 0};
+                            alert(newState);
+                            newState['opacity'] = 1;
+                            t.transition(newState);
+                        });
+                        alert('alert(i_next):' + i_next);
+                        $($('.slide')[i_next]).css('visibility', 'visible');
+                        $($('.slide')[i_next]).css('z-index', '2');
+                        $($('.slide')[i_current]).css('z-index', '1');
+        
+                        if (!init) {
+                            $($('.slide')[i_next]).transition({x: '100%', duration: 0});
+                            $($('.slide')[i_next]).transition({x: '0%', duration: 1000});
+                        }
+        
+                        $($('.slide')[i_next]).children('img').each(function(i) {
+                            var t = $(this);
+                            var d = t.data();
+                            var newState = {duration: 6000};
+                            newState['opacity'] = 1;
+                            t.transition(newState);
+                        });
+        
+                        if (!init) {
+                            $($('.slide')[i_current]).transition({x: '0%', duration: 0});
+                            $($('.slide')[i_current]).transition({x: '-100%', duration: 1000});
+                        }
+        
+                        window.setTimeout('doSlide()', 1000);
+                        i_current = i_next;
+                    }
+        
+                    $(function() {
+                        alert("function starts");
+                        $('#banner-cover').bind('contextmenu', function(event) {
+                            alert("banner-cover");
+                            event.preventDefault();
+                            return false;
+                        })
+        
+                        i_total = $('.slide').length;
+                        window.setTimeout('doSlide(true)', 0);
+        
+                        $('#slide0').children('img').each(function(i) {
+                            alert("slide0");
+                            var t = $(this);
+                        });
+                    });
+                </script>
+        -->
+        <!-- All Javascript at the bottom of the page for faster page loading -->
+
+        <!-- First try for the online version of jQuery-->
+        <script src="http://code.jquery.com/jquery.js"></script>
+
+        <!-- If no online access, fallback to our hardcoded version of jQuery -->
+        <script>window.jQuery || document.write('<script src={{url_for('static', filename='/includes/js/jquery-1.8.2.min.js')}}"><\/script>')</script>
+
+        <!-- Bootstrap JS -->
+        <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+
+        <!-- Custom JS -->
+        <script src="{{url_for('static', filename='includes/js/script.js')}}"></script>        
+    </body>
+</html>
+
