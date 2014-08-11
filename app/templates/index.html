@@ -1,9 +1,89 @@
 {% extends "base.html" %}
-{% block content %}
-<h1>Hi, {{user.nickname}}!</h1>
-{% for post in posts %}
-<p>
-  {{post.author.nickname}} says: <b>{{post.body}}</b>
-</p>
-{% endfor %}
+{% block main %}
+
+<iframe style="max-width:100%;max-height:500px;left:0;top:0;" width="2000 px" height="750 px" src="/banner" frameborder="no" scrolling="no" ></iframe>	
+
+<div class="row" id="bigCallout">
+    <div class="col-10"> <!-- full width of web-->
+
+        <div class="alert alert-success alert-block fade in" id="successAlert">
+        	<!--click btn, msg will fade in-->
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <!-- when click btn, dismiss the alert btn-->
+            <h4>Success!</h4>
+            <p>data-dismiss will dismiss btn when u click "x" in the corner</p>
+        </div><!-- end alert-->
+
+        <!-- Visible only on small devices -->				
+
+        <div class="well well-small visible-sm">
+            <a href="" class="btn btn-large btn-block btn-default">
+                <span class="glyphicon glyphicon-phone"></span>Give us a call</a>
+        </div><!--end well-small -->
+
+        <div class="well">
+            <div class="page-header">
+                <h1>A Fancy Header<small> A subheader for extra</small></h1>
+            </div><!--end page-header-->
+
+            <p class="lead"> A well is a container that causes the content to appear sunken or an inset effect on the page. To create a well, simply wrap the content that you would like to appear in the well with a containing the class of .well. The following example shows a default well.</p>
+
+            <a href="" class="btn btn-large btn-primary" id="alertMe">Click a nice big button</a>
+            <a href="" class="btn btn-large btn-link">or a secondary link</a>
+        </div><!--end well -->
+
+    </div><!--end col-12-->
+
+</div><!--end bigCallout-->	
+
+<div class="row" id="featuresHeading">
+    <div class="col-10">
+        <h2>More Features</h2>
+    </div><!--end col-12-->
+</div><!--end featureHeading-->
+
+
+<div class="home-bottom">
+
+    <div class="home-bottom-box">
+        <h3 style="color:#808080;padding:0;margin-top:0;margin-bottom:20px;">Follow me</h3>
+        Follow me on your favourite social media. I am not always active on all of them though.
+        <div style="margin-top:15px;">
+            {% set sns_links = [
+            ('facebook', 'https://www.facebook.com/gongzhen'),
+            ('weibo', 'http://www.weibo.com/1760933442/profile?topnav=1&wvr=5&user=1'),
+            ('twitter', 'https://twitter.com/gong_zhen'),
+            ('quora', 'http://www.quora.com/Gong-Zhen-2/'),
+            ('github', 'https://github.com/gongzhen'),
+            ('linkedin', 'https://www.linkedin.com/profile/view?id=137631356&trk=nav_responsive_tab_profile'),
+            ('flickr', ''),
+            ('500px', ''),
+            ('gplus', 'https://plus.google.com/u/0/'),
+            ('zhihu', 'http://www.zhihu.com/people/gong-zhen-58'),
+            ] %}
+
+            {% for (id, link) in sns_links %}
+            <div style="display:inline-block;margin-right:10px;margin-bottom:10px;line-height:1em;" class="clickable"><a href="{{ link }}" style="border:0;margin:0;width:40px;height:40px;padding:0;"><img alt="{{ id }}" src="http://static.dheera.net/icons/{{ id }}.gif" style="padding:0;margin:0;width:40px;height:40px;"></a></div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="home-bottom-box">
+        <h3 style="color:#808080;padding:0;margin-top:0;margin-bottom:20px;">News</h3>
+        {% for news_item in news_items %}
+        {|en:{{ news_item['date'][6:8] }}.{{ news_item['date'][4:6] }}.{{ news_item['date'][0:4] }}|zh:{{ news_item['date'][0:4] }}å¹´{{ news_item['date'][4:6] }}æœˆ{{ news_item['date'][6:8] }}}<br>
+        <a href="{{ news_item['link'] }}">{{ news_item['title'] }}</a>
+        <br><br>
+        {% endfor %}
+    </div>
+    <div class="home-bottom-box">
+        <h3 style="color:#808080;padding:0;margin-top:0;margin-bottom:20px;">Contact me</h3>
+        The easiest way to reach me is by e-mail at<br><br>
+        If you're trying to hire me, you might want to check out my <a href="">resume</a><a href=""></a>}
+    </div>
+
+</div>
+
+
 {% endblock %}
+
