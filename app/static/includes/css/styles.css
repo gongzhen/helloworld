@@ -29,7 +29,7 @@ Notes:	 Hand coded for Udemy.com
   height:200px;
   border:none;
   max-width:980px;
-  margin-top:50px;
+  margin-top:0px;
   margin-left:auto;
   margin-right:auto;
   margin-bottom:50px;
@@ -55,12 +55,6 @@ Notes:	 Hand coded for Udemy.com
    cursor: pointer;
 }
 
-.carousel-control {
-    margin-top: 320px;
-}
-
-
-
 /* --------------------------------------
    Typography
    -------------------------------------- */
@@ -69,6 +63,11 @@ body{
    -webkit-font-smoothing: antialiased; /* http://maxvoltar.com/sandbox/fontsmoothing/ */
    text-rendering:optimizelegibility;
    
+}
+
+#main {
+    margin: 0 auto;
+    width: 100%;
 }
 
 .well .page-header{
@@ -113,17 +112,17 @@ body{
 #myCarousel .item{ height:400px;}
 
 #slide1 {
-   background: url('../../images/carousel_medium_01.jpg') top center no-repeat;
+   background: url('../../images/carousel_large_01.jpg') top center no-repeat;
 }
 
 
 #slide2 {
-   background: url('../../images/carousel_medium_01.jpg') top center no-repeat;
+   background: url('../../images/carousel_large_01.jpg') top center no-repeat;
 }
 
 
 #slide3 {
-   background: url('../../images/carousel_medium_01.jpg') top center no-repeat;
+   background: url('../../images/carousel_large_01.jpg') top center no-repeat;
 }
 
 
@@ -156,15 +155,15 @@ body{
    #myCarousel .item{ height:310px; }
 
    #slide1 {
-      background: url('../../images/carousel_small_01.jpg') top center no-repeat;
+      background: url('../../images/carousel_large_01.jpg') top center no-repeat;
    }
 
    #slide2 {
-      background: url('../../images/carousel_small_01.jpg') top center no-repeat;
+      background: url('../../images/carousel_large_01.jpg') top center no-repeat;
    }
 
    #slide3 {
-      background: url('../../images/carousel_small_01.jpg') top center no-repeat;
+      background: url('../../images/carousel_large_01.jpg') top center no-repeat;
    }
 
    /* for mobile devices */
