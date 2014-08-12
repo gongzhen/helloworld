@@ -1,29 +1,35 @@
 {% extends "base.html" %}
 {% block main %}
 
-<iframe style="max-width:100%;max-height:500px;left:0;top:0;" width="2000 px" height="750 px" src="/banner" frameborder="no" scrolling="no" ></iframe>	
+<div id="about" class="content_page">
+    <img class="thumbnail pull-left" alt="Placeholder image" align="left" src="static/images/me.png" alt="Me">
+    <p>
+    I am a graduate student in the
+    <a href="http://www.csupomona.edu/~cs/">Computer Science</a>
+    department at the
+    <a href="http://www.csupomona.edu/">california polytechnic state university pomona</a>
+    , Pomona, CA, USA.
+    <br>
+    <br>
+    I am currently researching single-photon imaging and sensing with
 
-<div class="row" id="bigCallout">
-    <div class="col-10"> <!-- full width of web-->
+    in the
+    <br>
+    <br>
+    <h2>Fun and interests</h2>
+    My side interests include travelling, photography, astronomy, tea, (vegetarian) food, traditional and classical music, piano, pipe organ, violin, cycling, hiking, badminton and table tennis. I also enjoy participating/volunteering in the activites of a number of local activity groups, including:
+    <br>
+    <br>
+    I've been on the teams of the following groups:
+    <br>
+    <ul>
+    Other groups whose activities I frequently attend (and strongly recommend), but have not made any leadership contributions to:
+    <ul>
+    <br>
+    </p>
+    
 
-        <div class="alert alert-success alert-block fade in" id="successAlert">
-        	<!--click btn, msg will fade in-->
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <!-- when click btn, dismiss the alert btn-->
-            <h4>Success!</h4>
-            <p>data-dismiss will dismiss btn when u click "x" in the corner</p>
-        </div><!-- end alert-->
-
-        <!-- Visible only on small devices -->				
-
-        <div class="well well-small visible-sm">
-            <a href="" class="btn btn-large btn-block btn-default">
-                <span class="glyphicon glyphicon-phone"></span>Give us a call</a>
-        </div><!--end well-small -->
-
-    </div><!--end col-12-->
-
-</div><!--end bigCallout-->	
+</div>
 
 <div class="home-bottom">
 
@@ -61,7 +67,7 @@
     <div class="home-bottom-box">
         <h3 style="color:#808080;padding:0;margin-top:0;margin-bottom:20px;">Contact me</h3>
         The easiest way to reach me is by e-mail at<br><br>
-        If you're trying to hire me, you might want to check out my <a href="">resume</a><a href=""></a>}
+        If you're trying to hire me, you might want to check out my <a href="{{url_for('static', filename='resume.pdf')}}">resume</a><a href=""></a>}
     </div>
 
 </div>
