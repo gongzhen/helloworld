@@ -6,5 +6,23 @@ import json, datetime
 # index = Blueprint('index', __name__, template_folder='../template')
 
 @index.route('/')
-def index_show():
+def show_index():
 	return render_template('index.html')
+
+
+@index.route('/about')
+def about():
+	return render_template('about.html')	
+
+@index.route('/resume')
+def resume():
+	return render_template('resume.html')	
+
+@index.route('/projects')
+def projects():
+	return render_template('projects.html')		
+
+@index.route('/contacts')
+def contacts():
+	return render_template('contacts.html')			
+

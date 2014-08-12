@@ -12,6 +12,7 @@ app.register_blueprint(index_blueprint)
 from views.photos import photos as photos_blueprint
 app.register_blueprint(photos_blueprint)
 
+
 # move show method to home.py
 # @app.route('/')
 # def show():
